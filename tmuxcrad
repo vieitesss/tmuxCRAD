@@ -16,12 +16,12 @@ session_window="$current_session:$current_window"
 if [ -z $1 ]
 then
     tmux neww "tmux ls | sed 's/:.*//' | fzf \
-        --bind \"ctrl-n:execute(fzftree a)\" \
+        --bind \"ctrl-n:execute(tmuxcrad a)\" \
         --bind \"ctrl-n:+reload(tmux ls | sed 's/:.*//')\" \
-        --bind \"ctrl-d:execute(fzftree d {})\" \
+        --bind \"ctrl-d:execute(tmuxcrad d {})\" \
         --bind \"ctrl-d:+reload(tmux ls | sed 's/:.*//')+clear-query\" \
-        --bind \"ctrl-m:execute(fzftree e {})\" \
-        --bind \"ctrl-r:execute(fzftree r {})\" \
+        --bind \"ctrl-m:execute(tmuxcrad e {})\" \
+        --bind \"ctrl-r:execute(tmuxcrad r {})\" \
         --bind \"ctrl-r:+reload(tmux ls | sed 's/:.*//')+clear-query\" \
         "
 else
