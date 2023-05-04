@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# author: Daniel Vieites Torres
+
 # TODO: Same script for windows in each session?
 
 log() {
