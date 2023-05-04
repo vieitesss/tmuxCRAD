@@ -2,7 +2,7 @@
 
 This file allows you Creating, Renaming, Attach and Delete (CRAD) your [Tmux](https://github.com/tmux/tmux) sessions. It uses [fzf](https://github.com/junegunn/fzf) to easily find any session.
 
-https://raw.githubusercontent.com/vieitesss/tmuxCRAD/main/.github/images/video.mp4
+https://user-images.githubusercontent.com/60654781/236276954-25b48127-4cab-40a5-a6e0-95446b225090.mp4
 
 ## Getting started
 
