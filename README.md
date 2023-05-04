@@ -27,3 +27,14 @@ bind-key -n C-s run-shell "tmuxcrad"
 ```
 
 Remember reloading your config if you edited it.
+
+# Key combinations
+
+| Key   | Action               |
+|-------|----------------------|
+| Enter | Attach to a session  |
+| C-n   | Create a new session |
+| C-d   | Delete a session     |
+| C-r   | Rename a session     |
+
+To change any key, just modify the script. Be sure you change every match of the key you don't like.
