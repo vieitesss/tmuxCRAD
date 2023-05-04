@@ -25,3 +25,5 @@ bind-key C-s run-shell "tmuxcrad"
 # if you don't want to use your prefix [C-s]
 bind-key -n C-s run-shell "tmuxcrad"
 ```
+
+Remember reloading your config if you edited it.
