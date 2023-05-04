@@ -6,12 +6,12 @@ This file allows you Creating, Renaming, Attach and Delete (CRAD) your [Tmux](ht
 
 First install Tmux and fzf in your machine following the links above.
 
-Then execute the next commands.
+Then execute the next commands (1 by 1).
 
 ```shell
 git clone https://github.com/vieitesss/tmuxCRAD
 cp tmuxCRAD/tmuxcrad /some/directory/in/your/$PATH
-rm tmuxCRAD
+rm -rf tmuxCRAD
 ```
 
 After that, you can execute the script just as any other command in your terminal.
