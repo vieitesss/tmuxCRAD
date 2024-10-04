@@ -2,8 +2,6 @@
 
 # author: Daniel Vieites Torres
 
-# TODO: Same script for windows in each session?
-
 log() {
     echo "$1"
     echo "-----"
@@ -13,8 +11,7 @@ current_session="$(tmux list-sessions | grep attached | sed 's/:.*//')"
 current_window="$(tmux list-windows | grep active | sed 's/:.*//')"
 session_window="$current_session:$current_window"
 
-if [ -z $1 ]
-then
+if [ -z "$1" ]; then
     tmux neww "tmux ls | sed 's/:.*//' | fzf \
         --bind \"ctrl-n:execute(tmuxcrad a)\" \
         --bind \"ctrl-n:+reload(tmux ls | sed 's/:.*//')\" \
@@ -27,26 +24,25 @@ then
 else
     case $1 in
         d)
-            tmux kill-session -t $2
+            tmux kill-session -t "$2"
             log "Session '$2' deleted"
             ;;
         a)
-            read -p "Session name: " name
+            read -rp "Session name: " name
 
-            if [ ! -z $name ]
-            then
-                tmux new-session -d -s $name
+            if [ -n "$name" ]; then
+                tmux new-session -d -s "$name"
                 log "Session '$name' created"
             fi
             ;;
         e)
-            tmux switch -t $2
-            tmux kill-window -t $session_window
+            tmux switch -t "$2"
+            tmux kill-window -t "$session_window"
             ;;
         r)
-            read -p "Renaming session $2.`echo $'\nNew name: '`" name
-            if [ ! -z $name ]; then
-                tmux rename-session -t $2 $name
+            read -rp "Renaming session $2.\nNew name: " name
+            if [ -n "$name" ]; then
+                tmux rename-session -t "$2" "$name"
                 log "Rename '$2' -> '$name'"; sleep 0.5
             fi
             ;;
